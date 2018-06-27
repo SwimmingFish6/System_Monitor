@@ -1,0 +1,23 @@
+filebeat.prospectors:
+- input_type: log
+  paths:
+    - /Users/xuhlu/Documents/meraki-log/meraki_events.log
+  fields_under_root: true
+  fields:
+    type:  meraki_events_log
+#- input_type: log
+#  paths:
+#    - /Users/xuhlu/Documents/meraki-log/meraki_flows.log
+#  fields_under_root: true
+#  fields:
+#    type:  meraki_flows_log
+#- input_type: log
+#  paths:
+#    - /Users/xuhlu/Documents/meraki-log/meraki.log
+#  fields_under_root: true
+#  fields:
+#    type: meraki_log
+
+
+output.logstash:
+  hosts: ["localhost:5043"]
